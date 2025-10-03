@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GoBridge Frontend
 
-## Getting Started
+GoBridge Frontend is the user interface of the GoBridge protocol — a relay-free cross‑chain bridge powered by **Reactive Smart Contracts** and **goUSD** stablecoin.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🚀 **Bridge Interface** — Simple UI to move assets across supported chains  
+- 💸 **goUSD Dashboard** — Manage balances, view value in USD, and track holdings  
+- 📚 **Docs Integration** — Access protocol documentation directly in-app  
+- 🔐 **Wallet Connect** — Seamless integration with RainbowKit and Wagmi  
+- 🎨 **Modern UI/UX** — Tailored with responsive design, smooth transitions, and dark mode aesthetics  
+
+## 🛠️ Tech Stack
+
+- **Next.js 14** (App Router, React Server Components)  
+- **TypeScript** for type‑safe development  
+- **Tailwind CSS** for styling  
+- **RainbowKit + Wagmi + Viem** for wallet and chain interactions  
+- **Motion** for animations  
+
+## 📂 Project Structure
+
+```
+/components       → Shared UI components (NavTabs, WalletButton, etc.)
+/components/views → Page views (Bridge, goUSD, Docs)
+/providers        → Global React context providers
+/data             → Chain & token configs
+/public           → Assets (logos, favicons, manifests)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Run the dev server**
+   ```bash
+   pnpm dev
+   ```
 
-## Learn More
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm build
+pnpm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌐 Deployment
 
-## Deploy on Vercel
+The app is ready to deploy on any platform supporting Next.js apps: **Vercel**, **Netlify**, **Docker**, or custom servers.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📧 Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For **support & investment inquiries**:  
+✉️ team@gobridge.xyz
+
+---
+
+© 2025 GoBridge. All rights reserved.

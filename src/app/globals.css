@@ -1,8 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* base palette */
+  --background: 255 255 255;         /* #ffffff */
+  --foreground: 23 23 23;            /* #171717 */
+
+  /* dark UI palette (we’ll override in prefers-dark) */
+  --bg-1: 200 38% 5%;                /* deep green/black */
+  --bg-2: 180 35% 8%;
+  --card: 180 15% 10%;
+  --stroke: 180 8% 28%;
+  --text: 180 10% 92%;
+  --muted: 180 9% 65%;
+  --accent: 164 87% 55%;             /* neon mint */
+  --accent-2: 164 80% 45%;
+
+  --radius: 14px;
+}
+
+@keyframes fadeIn { from {opacity:0} to {opacity:1} }
+@keyframes fadeOut { from {opacity:1} to {opacity:0} }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.96) translateY(-4px); } to { opacity: 1; transform: scale(1) translateY(0); }}
+@keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(14,235,198,.25) } 100% { box-shadow: 0 0 0 10px rgba(14,235,198,0) } }
+
+/* Global custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(8, 14, 16, 0.85); /* koyu arka plan */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(14, 235, 198, 0.45), rgba(12, 181, 154, 0.28));
+  border-radius: 8px;
+  border: 2px solid rgba(8, 14, 16, 0.85); /* track ile arasına boşluk */
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(14, 235, 198, 0.65), rgba(12, 181, 154, 0.45));
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(14, 235, 198, 0.45) rgba(8, 14, 16, 0.85);
 }
 
 @theme inline {
@@ -22,5 +67,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
