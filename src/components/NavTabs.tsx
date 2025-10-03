@@ -71,7 +71,7 @@ export default function NavTabs({
               className="pointer-events-none absolute -left-3 -top-3 h-15 w-15 rounded-full blur-[14px]"
               style={{ background: "radial-gradient(50% 50% at 50% 50%, rgba(14,235,198,.35) 0%, rgba(12,181,154,.18) 55%, transparent 75%)" }}
             />
-            <Image height={40} width={40} src="/GoBridge.svg" alt="GoBridge" />
+            <Image height={40} width={40} src="/gobridge.svg" alt="GoBridge" />
           </div>
 
           {/* center: tabs */}
